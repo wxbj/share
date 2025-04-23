@@ -1,0 +1,66 @@
+工作站使用流程：
+1、(本地)安装xshell，用于远程连接到工作站
+	10.55.8.212:22
+
+2、linux基础知识
+	查看当前路径:pwd
+	查看当前文件夹:ls
+	前往指定文件夹:cd 路径
+	前往上一层文件夹:cd ..
+	创建文件:touch 文件名
+	修改文件:vim 文件名
+		vim基本使用:按i进去插入模式,按esc进入命令模式,再命令模式输出:wq保存并退出,注意:这里的冒号也是命令
+	复制文件:cp 源文件  目标文件
+	删除文件:rm 文件名
+	创建文件夹:mkdir 文件夹名
+	复制文件夹:cp -r 源目录 目标目录
+	删除文件夹以及子文件:rm -rf 文件夹名
+	复制文本:ctr+shift+c
+	粘贴文本:ctr+shift+v
+
+3、创建新的用户
+	sudo useradd -m -s /bin/bash username
+	sudo passwd username
+
+4、登录到新的用户
+	su - username
+
+5、修改自己文件夹为仅自己可见
+	chmod 700 /home/username
+
+6、(本地)安装FileZilla，用于将本地文件上传到工作站
+	SFTP
+
+7、安装conda，用于python包管理
+	wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+		改：cp Anaconda3-2024.06-1-Linux-x86_64.sh  /home/username
+	bash Anaconda3-2024.06-1-Linux-x86_64.sh
+	rm Anaconda3-2024.06-1-Linux-x86_64.sh
+
+8、创建自己代码的虚拟环境，并配置包
+	conda create --name packagename python=3.9
+	conda activate packagename
+	conda install 包名
+
+9、上传自己的代码
+	mkdir code
+	unzip 文件名.zip
+
+10、运行自己的代码
+	如果是命令行的直接输入命令行就可以
+	如果不是就:python 文件名.py
+
+11、保存自己的文件
+
+12、后台运行操作
+	创建:screen -S 名称
+	后台运行:Ctrl + a，然后按 d
+	查看:screen -ls
+	重进:screen -r 进程id
+	退出:Ctrl + d
+
+进阶内容:
+1、8.134.169.217:6000
+
+2、使用pycharm操作
+
